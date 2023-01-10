@@ -56,7 +56,7 @@ def overwrite_file(file,name,content,path):
 
 #file overwrite warning message
 def overwrite_warning(failed_file_path,pass_name,file_content,directory):
-    overwrite_warning = input("A file already exists with this name. Overwrite?(y/n) ")
+    overwrite_warning = input("\nA file already exists with this name. Overwrite?(y/n) ")
                 
     if overwrite_warning == "y":
         #print("test pass for yes")
@@ -64,13 +64,13 @@ def overwrite_warning(failed_file_path,pass_name,file_content,directory):
 
     elif overwrite_warning == "n":
         #print("test pass for no")
-        restart = input("Change the file name or quit?(y/n) ")
+        restart = input("\nChange the file name or quit?(y/n) ")
         if restart == "y":
             new_name = input("Type a new file name here: ")
             # new_path = input("Please resubmit the path: ")
             save_pass_to_file(new_name,directory,file_content)
         elif restart == "n":
-            print("Got it, see ya!")
+            print("\nGot it, see ya!")
             exit
 
     else:
