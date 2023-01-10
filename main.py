@@ -69,6 +69,9 @@ def overwrite_warning(failed_file_path,pass_name,file_content,directory):
             new_name = input("Type a new file name here: ")
             # new_path = input("Please resubmit the path: ")
             save_pass_to_file(new_name,directory,file_content)
+        elif restart == "n":
+            print("Got it, see ya!")
+            exit
 
     else:
         print("Error, incorrect input. Try again...")
