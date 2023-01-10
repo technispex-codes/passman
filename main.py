@@ -40,7 +40,7 @@ def save_pass_to_file(name,path,passw):
             print(f"\nYour password has been saved. \n\nYou can view it here: {verify}")
             break
         else:
-            overwrite_warning(save_to,passw,path)
+            overwrite_warning(save_to,name,passw,path)
             break
 
 
@@ -55,7 +55,7 @@ def overwrite_file(file,name,content,path):
 
 
 #file overwrite warning message
-def overwrite_warning(failed_file_path,file_content,directory):
+def overwrite_warning(failed_file_path,pass_name,file_content,directory):
     overwrite_warning = input("A file already exists with this name. Overwrite?(y/n) ")
                 
     if overwrite_warning == "y":
